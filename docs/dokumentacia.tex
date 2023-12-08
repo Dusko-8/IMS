@@ -1,0 +1,45 @@
+\documentclass[slovak]{fitiel}
+
+\usepackage{indentfirst}
+\usepackage{hyperref}
+
+% implicitní cesta k obrázkům
+\graphicspath{{fig/}}
+
+\title{\logo\\IEL -- protokol k projektu}
+\author{Meno, Priezvisko \\ xlogin}
+\date{\today} % today - dnešní datum
+
+\begin{document}
+	%\maketitle
+	\begin{titlepage}
+		\onecolumn
+		\begin{center}
+			{\logo\\}
+			\vspace{\stretch{0.382}}
+			{\LARGE Modelovanie a simulácie\\SHO Model služeb v oblasti sport\\[0.4em] 
+			\Huge Snowparadise Veľká Rača}\\
+			\vspace{\stretch{0.618}}
+		\end{center}
+		{\Large 2023 \hfill Dušan Slúka (xsluka00), Ivan Mahút (xmahut01)}
+	\end{titlepage}
+	\clearpage
+	
+	\tableofcontents
+	
+	\newpage
+
+	\input{01-uv.tex} 
+
+	\input{02-rz.tex} 
+
+	\input{03-kc.tex}
+
+	\pagebreak
+	\Urlmuskip=0mu plus 1mu\relax
+	\bibliographystyle{czechiso}
+	\bibliography{dokumentacia}
+
+	
+	
+\end{document}
