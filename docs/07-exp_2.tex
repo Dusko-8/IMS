@@ -1,0 +1,31 @@
+﻿\section{Porovnanie Priepustnosti: Pokladna vs. Automat}
+\subsection{Úvod do Experimentu}
+V tomto experimente sme nahradili tradičnú pokladňu č. 2 automatizovaným platobným systémom, označeným ako `PokladnaAutomat2`, s cieľom posúdiť vplyv na priepustnosť a efektívnosť operácií v lyžiarskom stredisku.
+
+\subsection{Výsledky Experimentu}
+Porovnávame kľúčové ukazovatele výkonnosti pre  pôvodnú `Pokladna2` a novú `PokladnaAutomat2`:
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+Indikátor &  Pokladna2 (pôvodná)  & PokladnaAutomat2 (nová) \\ \midrule
+Počet požiadaviek & 103 &  198 \\
+Maximálna dĺžka radu & 17 &  17 \\
+Priemerná dĺžka radu & 4 &  3 \\
+Priemerná čakacia doba (minuty) & 15 & 8 \\
+\bottomrule
+\end{tabular}
+\caption{Porovnanie výkonnosti pokladní a automatov.}
+\label{tab:performance_comparison}
+\end{table}
+
+\subsection{Diskusia a Záver}
+Z experimentálnych dát je zrejmé, že zavedenie `PokladnaAutomat2` viedlo k výraznému zlepšeniu. 
+Priemerná čakacia doba bola o takmer polovicu nižšia v porovnaní s `Pokladna1`. 
+Taktiež sme pozorovali, že maximálna a priemerná dĺžka radu zostala stabilná, napriek zvýšeniu počtu transakcií,
+čo poukazuje na vyššiu efektivitu `PokladnaAutomat2`.
+Na základe týchto pozorovaní odporúčame zvážiť ďalšie nahradenie tradičných
+pokladní automatizovanými systémami, ktoré môžu významne zlepšiť priepustnosť a zákaznícku skúsenosť v celom stredisku. 
+Automatizácia znižuje čakacie doby, zvyšuje spokojnosť zákazníkov a môže potenciálne znížiť prevádzkové náklady.
+
