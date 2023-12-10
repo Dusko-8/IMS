@@ -8,7 +8,8 @@ typedef struct {
                  cafeteria_visitors_capacit,
                  cashier_selling_time,
                  automat_selling_time,
-                 skylift_travle_time;
+                 skylift_travle_time,
+                 cafeteria_temp_time;
 } ResortStaticData;
 
 

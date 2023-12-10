@@ -46,11 +46,12 @@ ResortVariableData season_normal_weather_raining = {
 ResortStaticData static_data = {
     1800,  //customer_cafetria_Time
     900,   //customer_cafetria_time_standing
-    60,   //cafeteria_cashier_time
+    120,   //cafeteria_cashier_time
     30,    //cafeteria_visitors_capacit
     120,   //cashier_selling_time
     60,    //automat_selling_time
     900,   //skylift_travle_time
+    240,   //cafeteria_temp_worker_time
 };
 
 ResortVariableData RunData = seson_peak_weather_normal;

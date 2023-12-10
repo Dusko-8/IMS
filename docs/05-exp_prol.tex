@@ -1,6 +1,4 @@
-﻿\section{ Kľúčové aspekty simulačných experimentov }
-
-\section{Kľúčové aspekty simulačných experimentov}
+﻿\section{Kľúčové aspekty simulačných experimentov}
 
 V rámci projektu kladieme dôraz na analýzu a hodnotenie priepustnosti lyžiarskeho strediska. Cieľom simulačných experimentov je 
 identifikovať úzke miesta v toku návštevníkov a navrhnúť efektívne riešenia na ich odstránenie.
@@ -22,3 +20,27 @@ Z experimentov očakávame získanie hĺbkového porozumenia dynamiky návštevn
   \item Optimalizáciu časového rozvrhu a logistiky návštevníkov.
   \item Zlepšenie celkovej návštevníckej skúsenosti prostredníctvom zníženia čakacích dôb.
 \end{itemize}
+
+\subsection{Overenie validity modelu}
+Validita modelu bola overená porovnaním výstupných dát simulácie a dát zozbieraných z lyžiarskeho strediska.
+Výsledný model je schopný celkom presne reprodukovať reálnu prevádzku lyžiaskeho strediska. Ako je možné vidiet v tabulke \ref{tab:validity}, 
+kde sú porovnané získané dáta a výstup zo simulácie.
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{@{}lcc@{}}
+  \toprule
+  Indikátor &  Reálne dáta  & Výstup simulácie \\ \midrule
+  Počet návštevníkov & 1800 &  1890 \\
+  Čakanie na lanovku & 1-2 min &  0,5 min \\
+  Jazda lanovkou & 15 min &  15 min \\
+  Zjazd svahu & 7-8 min & 8 min \\
+  \bottomrule
+  \end{tabular}
+  \caption{Porovnanie reálnych dát a simulácie.}
+  \label{tab:validity}
+  \end{table}
+Pozn: Čakanie na lanovku je v modeli kratšie ako v reálnom prostredí. Je to spôsobené tým že ak je v rade 4 a viac ľudí,
+tak v simulácií nasadnú vždy 4 ľudia, pričom v realite tomu nie vždy tak je. Pokusy o simulovanie tohto správania a dosiahnutia
+čakacej doby, ktorá je viac bližšia realite však znevalidovávali ostatné údaje simulácie.
+
+

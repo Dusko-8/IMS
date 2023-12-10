@@ -15,6 +15,7 @@ extern Facility cashier2;
 extern Facility cashierAutomat;
 extern Facility cashierAutomat2;
 extern Facility cafeteria;
+extern Facility cafeteria2;
 extern Store cafeteria_seats;
 extern Queue skylift_queue;
 extern Facility skylift;
@@ -24,7 +25,6 @@ extern Facility skylift;
 class Visitor : public Process {
 public:
     Visitor();
-    /*Netusim co toto robi nasledujuce 3 veci */
     static int totalVisitors;
     static int totalVisitors2;
     static int VolanteerLeave;

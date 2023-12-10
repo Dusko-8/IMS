@@ -7,6 +7,7 @@ Facility cashierAutomat2("PokladnaAutomat2");
 Facility cashierAutomat("PokladnaAutomat");
 
 Facility cafeteria("Cafeteria bar");
+Facility cafeteria2("Cafeteria bar2");
 Store cafeteria_seats("Cafeteria sedacky", static_data.cafeteria_visitors_capacit);
 Queue skylift_queue("Rada na lanovku");
 
@@ -25,9 +26,6 @@ class ExitEvent : public Event {
 public:
     ExitEvent(Visitor* v) : visitor(v) {}
     void Behavior() override {
-        /*if(visitor->isInQueue()){
-            printf("In quue and leaving");
-        }*/
         Visitor::totalVisitors2++;
         visitor->HandleLeave();
     }
@@ -39,12 +37,7 @@ void Lift::Behavior() {
 
         int processedCustomers = 0;
 
-        /*if (Time >  21602 && Time <=21608){
-            printf("queue size - %d",skylift_queue.size());
-        }*/
-
         if (Time >  14400 && Time <=21600){
-            printf("queue size - %d",skylift_queue.size());
             for (size_t i = 0; i < skylift_queue.size(); i++)
             {
                 Visitor *visitor = (Visitor *)skylift_queue.GetFirst(); // Get the first customer in the queue
@@ -58,12 +51,9 @@ void Lift::Behavior() {
         {
             while (!skylift_queue.Empty() && processedCustomers < 4) {
                 Visitor *visitor = (Visitor *)skylift_queue.GetFirst(); // Get the first customer in the queue
-                //skylift_queue.operator delete(visitor);
-                //printf("queue size continuus - %d + %f\n",skylift_queue.size(),Time);
                 visitor->Activate();
                 processedCustomers++;
             }
-            //printf("queue size - %d Time :%f \n",skylift_queue.size(),Time);
             
             Activate(Time + 6);
         }
@@ -79,7 +69,6 @@ Visitor::Visitor() {
         MidTicket++;
 
     }
-    //totalVisitors2++;
     Activate();
 }
 
@@ -94,6 +83,16 @@ void Visitor::HandlePayment() {
 
     if (!skipCashier) {
 
+        if (cashier1.QueueLen() <= cashier2.QueueLen() && cashier1.QueueLen() <= cashierAutomat.QueueLen())
+        {
+            ProcessFacility(cashier1, static_data.cashier_selling_time);
+
+        }else if(cashier2.QueueLen() <= cashier1.QueueLen() && cashier2.QueueLen() <= cashierAutomat.QueueLen()){
+            ProcessFacility(cashier2, static_data.automat_selling_time);
+        }else{
+            ProcessFacility(cashierAutomat, static_data.automat_selling_time);
+        }
+        /*
         if (cashier1.QueueLen() <= cashierAutomat2.QueueLen() && cashier1.QueueLen() <= cashierAutomat.QueueLen())
         {
             ProcessFacility(cashier1, static_data.cashier_selling_time);
@@ -102,7 +101,7 @@ void Visitor::HandlePayment() {
             ProcessFacility(cashierAutomat2, static_data.automat_selling_time);
         }else{
             ProcessFacility(cashierAutomat, static_data.automat_selling_time);
-        }
+        }*/
 
         totalVisitors += groupSize;
         
@@ -136,11 +135,9 @@ void Visitor::HandleSkying() {
     if (Time >  14400 && Time <=21600){
         Visitor::LeftInGap++;
         HandleLeave();
-        printf("Gong Home- %f \n",Time);
     }
     else{    
         HandleSkiLift();
-        printf("Gong DownHill- %f \n",Time);
     }
 }
 
@@ -181,7 +178,15 @@ void Visitor::HandleActivity() {
 
 void Visitor::HandleCafeteria() {
 
-    ProcessFacility(cafeteria, static_data.cashier_selling_time);
+    /*if (cafeteria.QueueLen() <= cafeteria2.QueueLen())
+    {
+        ProcessFacility(cafeteria, static_data.cafeteria_cashier_time);
+    }
+    else
+    {
+        ProcessFacility(cafeteria2, static_data.cafeteria_temp_time);
+    }*/
+    ProcessFacility(cafeteria, static_data.cafeteria_cashier_time);
     // let someone else from queue in
     HandleCafeteriaTable();
     

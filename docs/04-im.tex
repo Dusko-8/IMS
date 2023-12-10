@@ -1,17 +1,17 @@
 ﻿\section{Struktúra Simulačného Systému pre Lyžiarske Stredisko}
-Projekt simulačného modelu lyžiarskeho strediska bol vyvinutý v jazyku C++, s dôrazom na integráciu knižnice Simlib a využitím standardných C++ knižníc.
+Projekt simulačného modelu lyžiarskeho strediska bol vyvinutý v jazyku C++, s dôrazom na integráciu knižnice Simlib a využitím štandardných C++ knižníc.
 \subsection{Prevod Konceptuálneho Modelu na Simulačný}
-Základom simulácie je návštevník typu \texttt{visitor}, ktorý je konfigurovaný prostredníctvom metódy \texttt{visitor.cpp} na základe poskytnutých simulačných dát, obsahujúcich parametre ako dĺžka simulácie a rôzne hodnoty používané v rámci modelu. Spustenie simulácie je realizované metódou \texttt{Run} .
+Základom simulácie je návštevník typu \texttt{visitor}, ktorý je konfigurovaný prostredníctvom metódy \texttt{visitor.cpp} na základe poskytnutých simulačných dát, obsahujúcich parametre ako dĺžka simulácie a rôzne hodnoty používané v rámci modelu. Spustenie simulácie je realizované metódou \texttt{Run}.
 
-Model obsahuje komponentu pre generovanie návštevníkov, ktorí reprezentujú lyžiarov a snowboardistov prichádzajúcich do strediska .
+Model obsahuje komponentu pre generovanie návštevníkov, ktorí reprezentujú lyžiarov a snowboardistov prichádzajúcich do strediska.
 
-Tento proces generovania je implementovaný v súbore \texttt{visitor_generator.cpp}, kde sú definované časové intervaly príchodov a správanie návštevníkov. 
+Tento proces generovania je implementovaný v súbore \texttt{visitor\_generator.cpp}, kde sú definované časové intervaly príchodov a správanie návštevníkov. 
 Tak isto sa tu nachádza definícia pre rôzne časové intervaly počas dňa.  Konkrétne 4 zhodnotené podľa reality kedy sa mení počet prichádajúciach ľudí. 
 Je tu zakonponovaný aj príchod autobusu na strdisko 2x do dňa. 
 Simulácia ďalej zahrnuje reprezentáciu lyžiarskych vlekov, kde každý vlek má stanovenú svoju kapacitu a čakaciu dobu. Jedná sa o čisté dáta získané zo strdiska.
-Tieto aspekty sú v súbore \texttt{SkyResort_Data.cpp}. Sú tu aj jednotlivé šance rozhodnutí lyžiarov. A všetky čakacie doby. 
+Tieto aspekty sú v súbore \texttt{SkyResort\_Data.cpp}. Sú tu aj jednotlivé šance rozhodnutí lyžiarov. A všetky čakacie doby. 
 Pre modelovanie používame viacej prípadov ktoré sa týkajú počasia a času v sezone.
 
 Návštevníci po príchode do strediska prechádzajú rôznymi etapami - od vstupu, cez využitie vlekov, až po lyžovanie na zjazdovkách možná návšteva kafetérie. Každý z týchto procesov je modelovaný špecifickými metódami, ktoré odrážajú reálnu dynamiku lyžiarskeho strediska implementované v \texttt{visitor.cpp}.
 Na konci simulácie sú zhromaždené a analyzované dáta o pohybe a správaní návštevníkov, ako aj využívaní kapacít strediska. Tento postup umožňuje získať prehľad o efektívnosti a kapacitách lyžiarskeho strediska v rôznych simulačných scenároch .
-V súbore \texttt{simulation.cpp} sa inicializujú potrebné objekty a začína simulácia. Taktiež sú tu spracované štatystyky, navrchol klasických poskytnutých simulačným systémom.
+V súbore \texttt{simulation.cpp} sa inicializujú potrebné objekty a začína simulácia. Taktiež sú tu spracované štatistiky, navrchol klasických, poskytnutých simulačným systémom.

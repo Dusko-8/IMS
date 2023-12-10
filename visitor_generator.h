@@ -5,22 +5,11 @@
 #include <simlib.h>
 #include "visitor.h"
 
-/*class Generator : public Event {
-    std::vector<Visitor *> visitor;
-    ResortVariableData *data_;
-public:
-    Generator(ResortVariableData *data);
-    void Behavior();
-    
-};*/
-// In visitor_generator.h
-
 class Generator : public Event {
-    std::vector<Visitor *> visitors;  // Assuming this holds pointers to Visitor objects
+    std::vector<Visitor *> visitors;  
     ResortVariableData *data_;
 public:
     Generator(ResortVariableData *data);
-    //~Generator();  // Destructor to clean up Visitor objects
     void Behavior();
     static int MorningPeek;
     static int MorningNormal;

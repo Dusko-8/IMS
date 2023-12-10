@@ -11,7 +11,6 @@ using namespace std;
 int main() {
     Init(0, RunData.simulationLength);
     RandomSeed(time(nullptr));
-    //fflush(stdout);
     
     //Generator *gen = new Generator(&RunData);
     (new Generator(&RunData))->Activate();
@@ -23,11 +22,12 @@ int main() {
     cashierAutomat.Output();
     cashierAutomat2.Output();
     cafeteria.Output();
+    cafeteria2.Output();
     cafeteria_seats.Output();
     skylift_queue.Output();
     printf("Total of visitors -> %d\n",Visitor::totalVisitors);
-    printf("Total of visitors Leve on 4H dedline-> %d\n",Visitor::totalVisitors2);
-    printf("Volantere leave of visitors -> %d\n",Visitor::VolanteerLeave);
+    printf("Total of visitors leave on 4H deadline-> %d\n",Visitor::totalVisitors2);
+    printf("Volunteer leave of visitors -> %d\n",Visitor::VolanteerLeave);
     printf("4 H tickets -> %d\n",Visitor::MidTicket);
     printf("skiped -> %d\n",Visitor::SkipedCashier);
     printf("MorningPeek -> %d\n",Generator::MorningPeek);

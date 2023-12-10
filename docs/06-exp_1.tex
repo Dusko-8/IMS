@@ -4,7 +4,7 @@
 \subsection{Výsledky Experimentu}
 
 Na základe poskytnutých simulácií boli vyhodnotené priepustnosti rôznych zariadení v lyžiarskom stredisku.
-Simulácia odhalila kritické body,kde dôjde k akumulácii návštevníkov, čo môže viesť k predĺženiu čakacích časov a zníženiu celkovej spokojnosti.
+Simulácia odhalila kritické body, kde dôjde k akumulácii návštevníkov, čo môže viesť k predĺženiu čakacích časov a zníženiu celkovej spokojnosti.
 
 \subsection{Priepustnosť a Obslužné Doby}
 \begin{itemize}
@@ -13,11 +13,9 @@ Simulácia odhalila kritické body,kde dôjde k akumulácii návštevníkov, čo
   \item Cafeteria bar vykázala najvyššie využitie s výrazne dlhšími čakacími dobami, čo poukazuje na potrebu zlepšenia v tejto oblasti.
 \end{itemize}
 
-\subsection{Záver}
-Optimalizácia procesov v lyžiarskom stredisku, najmä zvýšenie priepustnosti v oblastiach s vysokým využitím, by mohla mať významný dopad na zlepšenie plynulosti prevádzky a návštevníckej skúsenosti. Zdá sa, že automatizované pokladne by mohli prispieť k zvýšeniu rýchlosti obsluhy a zníženiu čakacích dôb, čo je jeden z možných smerov k zlepšeniu.
-
-
-\begin{tikzpicture}\small
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}\small
     \begin{axis}[
         ybar,
         enlargelimits=0.15,
@@ -37,4 +35,12 @@ Optimalizácia procesov v lyžiarskom stredisku, najmä zvýšenie priepustnosti
       (PoA,130) (Caf,162)};
     \legend{Čakacia doba, Využitie}
     \end{axis}
-\end{tikzpicture}
+  \end{tikzpicture}
+  \caption{Porovnanie priemernej doby čakania a využitia pre rôzne zariadenia.}
+\end{figure}
+
+\subsection{Záver}
+Optimalizácia procesov v lyžiarskom stredisku, najmä zvýšenie priepustnosti v oblastiach s vysokým využitím, by mohla mať významný dopad na zlepšenie plynulosti prevádzky a návštevníckej skúsenosti. Zdá sa, že automatizované pokladne by mohli prispieť k zvýšeniu rýchlosti obsluhy a zníženiu čakacích dôb, čo je jeden z možných smerov k zlepšeniu.
+
+
+
