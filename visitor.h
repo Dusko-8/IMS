@@ -13,6 +13,7 @@
 extern Facility cashier1;
 extern Facility cashier2;
 extern Facility cashierAutomat;
+extern Facility cashierAutomat2;
 extern Facility cafeteria;
 extern Store cafeteria_seats;
 extern Queue skylift_queue;
@@ -27,9 +28,9 @@ public:
     static int totalVisitors;
     static int totalVisitors2;
     static int VolanteerLeave;
-
+    static int SkipedCashier;
     
-
+    static int LeftInGap;
     static int MidTicket;
     bool skipCashier = false;
     int groupSize = int(Random() * 4) + 1;
@@ -48,6 +49,7 @@ public:
     void HandleActivity();  // is decision based process
     void HandleSkying();
     void HandleSkiLift();
+    void HandleEmptyQueue();
     void HandleLeave();
 };
 

@@ -42,6 +42,7 @@ void Generator::Behavior() {
         arraival_Time = data_->customer_arraival_Time_standard;
         MorningNormal++;
         this->Activate(Time + Exponential(arraival_Time));
+
     }else if (Time >  10800 && Time <=14400)
     {
         arraival_Time = data_->customer_arraival_Time_low;

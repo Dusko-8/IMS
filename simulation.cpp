@@ -21,19 +21,22 @@ int main() {
     cashier1.Output();
     cashier2.Output();
     cashierAutomat.Output();
+    cashierAutomat2.Output();
     cafeteria.Output();
     cafeteria_seats.Output();
     skylift_queue.Output();
     printf("Total of visitors -> %d\n",Visitor::totalVisitors);
-    printf("Total of visitors Activated-> %d\n",Visitor::totalVisitors2);
+    printf("Total of visitors Leve on 4H dedline-> %d\n",Visitor::totalVisitors2);
     printf("Volantere leave of visitors -> %d\n",Visitor::VolanteerLeave);
     printf("4 H tickets -> %d\n",Visitor::MidTicket);
-
+    printf("skiped -> %d\n",Visitor::SkipedCashier);
     printf("MorningPeek -> %d\n",Generator::MorningPeek);
     printf("MorningNormal -> %d\n",Generator::MorningNormal);
     printf("MorningLow -> %d\n",Generator::MorningLow);
     printf("NightPeek -> %d\n",Generator::NightPeek);
     printf("NightLow -> %d\n",Generator::NightLow);
+    //printf("Left IN gap -> %d\n",Visitor::LeftInGap);
+    
 
 
     return 0;

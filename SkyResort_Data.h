@@ -9,7 +9,6 @@ typedef struct {
                  cashier_selling_time,
                  automat_selling_time,
                  skylift_travle_time;
-          
 } ResortStaticData;
 
 
