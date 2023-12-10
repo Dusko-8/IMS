@@ -1,7 +1,7 @@
 \section{Rozbor témy a použité technológie} \label{sec:rozbor}
 Simulácia sa zaoberá fungovaním lyžiarskeho strediska počas rôzdnych dní. Hlavnou časťou strediska je 
-lanovka, ktorá vyváža ľudí na vrch kopca. Rozostup medzi sedačkami lanovky je 6s, jedna cesta na kopec je dlhá 8,4 minúty.
-Zlyžovanie kopca zaberie 3-5 minút. 
+lanovka, ktorá vyváža ľudí na vrch kopca. Rozostup medzi sedačkami lanovky je 6s, jedna cesta na kopec je dlhá 15 minút.
+Zlyžovanie kopca zaberie približne 8 minút. 
 Lyžiarske stredisko taktiež obsahuje zariadenie s občerstvením.\par
 Fungovanie a návštvevnosť strediska ovplyvňuje viacero faktorov, jedným z nich je počasie. Pochopiteľne pri horšom 
 počasí je návštvevnosť strediska menšia ako v slnečný deň. Stredisko sa nachádza na severe Slovenska, tým pádom počasie môže vytvoriť
@@ -9,14 +9,15 @@ extrémne podmienky, ktoré následne vedú k prerušeniu prevádzky. Napríklad
 čo je pri konkrétnom type lanovky 18 m/s, musí byť lanovka odstavená.\par
 Daľší vplyv na príchod ľudí je typ dňa, návštevnosť bude nižššia počas pracovných dní ako počas víkendu alebo sviatkov. 
 Kedže lyžiarske stredisko ponúka aj možnosť večerného lyžovania pri umelom osvetlení, ľudia prichádzajú počas celého dňa.
-Taktiež do lyžiarskeho strediska premávajú skibusy, jeden pre denné lyžovanie (príchod o 8, odchod o 16) a 
-druhý pre večerné lyžovanie (príchod o 17, odchod o 21).
-Z hladiska času stráveného v stredisku, je to na základe údajov získaných zo strediska, 60\% ľudí si kupuje 4 hodinový lístok a 40\% 8 hodinový lístok. 
+Taktiež do lyžiarskeho strediska premávajú skibusy, jeden pre denné lyžovanie (príchod o 8:30) a 
+druhý pre večerné lyžovanie (príchod o 17:30).
+Z hladiska času stráveného v stredisku, je to na základe údajov získaných zo strediska, 60\% ľudí si kupuje 4 hodinový lístok a 40\% celodenný lístok. 
 
 \subsection{Použité postupy}
-Konečný model bol založený na Petriho sieti. Vytvorená Petriho sieť jednoducho ale zároveň presne reprezentuje interakcie a priebeh fungovania lyžiarskeho strediska.
+Konečný model\cite[str. 6]{ims} bol založený na Petriho sieti\cite[str. 31]{ims}. Vytvorená Petriho sieť jednoducho ale zároveň presne reprezentuje interakcie a priebeh fungovania lyžiarskeho strediska.
 
 
 \subsection{Použité technológie}
-Simulácia je vytvorená v jazyku C++ s použitím knižnice voľne dostupnej knižnice Simlib vo verzii 3.08.  Pri vypracovaní bola čerpaná inšpirácia z inšpirácia
-z ukážok použitia knižnice\cite{simlib}
+Simulácia je vytvorená v jazyku C++ s použitím knižnice voľne dostupnej knižnice Simlib vo verzii 3.08. Jazyk C++ bol zvolený pre jeho výkon a efektívnosť. Ďaľším dôležitými faktormi jazyka C++ sú jeho flexibilita a kontrola nad hardvérom. C++ taktiež poskytuje objektovo orientovaný prístup, čo uľahčuje impelentáciu simulácie. Simlib bol zvolený pretože poskytuje nástroje a štruktúry pre modelovanie a simuláciu udalostí, fronty a zdrojov. 
+Zjednodušuje implementáciu simulácii a zvyšuje efektívne riadenie toku simulovaných procesov. Pri vypracovaní bola čerpaná inšpirácia
+z ukážok použitia knižnice\cite{simlib}.
