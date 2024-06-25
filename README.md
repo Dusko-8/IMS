@@ -6,8 +6,8 @@ This project describes the simulation of the ski resort Snowparadise Veľká Ra�
 
 ## Authors and Sources of Information
 
-The work was developed by Dušan Slíka and Ivan Mahút. Information for the technical part of the work was drawn from materials for the subject "Modeling and Simulation". Input data and facts were obtained from the employees of the ski resort, and additional technical data were obtained from the website [Lanovky.sk][1].
-
+The work was developed by Dušan Slúka and Ivan Mahút. Information for the technical part of the work was drawn from materials for the subject "Modeling and Simulation". Input data and facts were obtained from the employees of the ski resort, and additional technical data were obtained from the website 
+Lanovky.sk
 ## References
 
 1. Lanovky.sk
